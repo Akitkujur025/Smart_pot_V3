@@ -23,7 +23,7 @@ $(document).ready(function () {
           $(`#temperature${sensorId}`).text(`Temperature: ${temperature}`);
           $(`#humidity${sensorId}`).text(`Humidity: ${humidity}`);
           $(`#soilMoisture${sensorId}`).text(`Soil Moisture: ${soilMoisture}`);
-          $(`#uvIntensity${sensorId}`).text(`Light Intensity: ${LightIntensity}`);
+          $(`#uvIntensity${sensorId}`).text(`Light Intensity: ${LightIntensity.toFixed(3)}lx`);
 
           //Update plant message according to the conditions
           if(item.Temp.C>95){
