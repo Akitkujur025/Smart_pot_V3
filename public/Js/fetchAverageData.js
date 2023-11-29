@@ -43,17 +43,20 @@ $(document).ready(function () {
           item.averages.Soil !== undefined ? item.averages.Soil : "";
         const lightIntensity =
           item.averages.Light !== undefined ? item.averages.Light : "";
-        const timestampSeconds = item.timestamp ? item.timestamp._seconds : 0;
-        const timestamp = new Date(timestampSeconds * 1000).toLocaleTimeString(
-          [],
-          { hour: "2-digit", minute: "2-digit" }
-        );
+        const day = item.timestamp ? item.timestamp.toDate().getDay() : 0;
+        const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const dayName = daysOfWeek[dayOfWeek];
+        // const timestampSeconds = item.timestamp ? item.timestamp._seconds : 0;
+        // const timestamp = new Date(timestampSeconds * 1000).toLocaleTimeString(
+        //   [],
+        //   { hour: "2-digit", minute: "2-digit" }
+        // );
 
         // Append rows to the table
         $("#sensorDataTable2 tbody").append(
           `<tr>
               <td class="text-center">${snoCounter}</td>
-              <td class="text-center">${timestamp}</td>
+              <td class="text-center">${dayName}</td>
               <td class="text-center">${temperatureC}C/${temperatureF}F</td>
               <td class="text-center">${humidity}</td>
               <td class="text-center">${soilMoisture}</td>
