@@ -54,8 +54,8 @@ $(document).ready(function () {
           `<tr>
               <td class="text-center">${snoCounter}</td>
               <td class="text-center">${timestamp}</td>
-              <td class="text-center">${temperatureC}C/${temperatureF}F</td>
-              <td class="text-center">${humidity}</td>
+              <td class="text-center">${temperatureC.toFixed(2)}C/${temperatureF}F</td>
+              <td class="text-center">${humidity.toFixed(2)}</td>
               <td class="text-center">${soilMoisture}</td>
               <td class="text-center">${lightIntensity.toFixed(4)}</td>
             </tr>`
