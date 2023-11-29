@@ -57,7 +57,7 @@ $(document).ready(function () {
               <td class="text-center">${temperatureC}C/${temperatureF}F</td>
               <td class="text-center">${humidity}</td>
               <td class="text-center">${soilMoisture}</td>
-              <td class="text-center">${lightIntensity}</td>
+              <td class="text-center">${lightIntensity.toFixed(4)}</td>
             </tr>`
         );
         
